@@ -52,11 +52,11 @@ void loop() { // put your main code here, to run repeatedly:
       pres = bmp_pressure->getEvent(&pressure_event);
       
       EEPROM.write(eeAddress, temp);
-      Serial.print(F("Pressure = "));
+      Serial.print(F("Temperature = "));
       EEPROM.get(eeAddress, temp);
       eeAddress += 1;
       EEPROM.write(eeAddress, pres);
-      Serial.print(F("Temperature = "));
+      Serial.print(F("Pressure = "));
       EEPROM.get(eeAddress, pres);
       eeAddress += 1;
 
